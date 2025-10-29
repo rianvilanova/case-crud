@@ -8,7 +8,7 @@ function listarNoticias($conn)
 
 function adicionarNoticia($conn, $titulo, $subtitulo, $conteudo, $autor, $categoria, $tipo) {
     $stmt = $conn->prepare("INSERT INTO noticias (titulo, subtitulo, conteudo, autor, categoria, tipo) VALUES (?, ?, ?, ?, ?, ?)"); // Data é atribúida automaticamente pelo banco, nao precisa ser passado aqui
-    $stmt->bindParam("ssssss", $titulo, $subtitulo, $conteudo, $autor, $categoria, $tipo);
+    $stmt->bind_param("ssssss", $titulo, $subtitulo, $conteudo, $autor, $categoria, $tipo);
     return $stmt->execute();
 }
 function buscarNoticiaPorId($conn, $id) { // Para auxiliar na funcao de deletar e numa possivel feature de pesquisa por ID
