@@ -30,18 +30,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 <h1>Criar nova notícia</h1>
 
-<form method="POST">
+<form method="POST" action="create.php" onsubmit="return validarFormulario()">
     <label>Título:</label>
-    <input type="text" name="titulo" required>
+    <input type="text" name="titulo" id="titulo" required>
 
     <label>Subtítulo:</label>
     <input type="text" name="subtitulo">
 
     <label>Conteúdo:</label>
-    <textarea name="conteudo" rows="5" required></textarea>
+    <textarea name="conteudo" id="conteudo" rows="5" required></textarea>
 
     <label>Autor:</label>
-    <input type="text" name="autor" required>
+    <input type="text" name="autor" id="autor" required>
 
     <label>Categoria:</label>
     <input type="text" name="categoria">
@@ -59,5 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit">Salvar</button>
     <a href="index.php"><button type="button">Voltar</button></a>
 </form>
+<script src="assets/js/validation.js"></script>
 </body>
 </html>
