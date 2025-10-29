@@ -35,10 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Editar Notícia</title>
+    <title>Editar notícia | Jornal OPOVO</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<h1>Editar Notícia</h1>
+<h1>Editar notícia</h1>
 <form method="POST">
     <label>Título:</label><br>
     <input type="text" name="titulo" value="<?= htmlspecialchars($noticia['titulo']) ?>" required><br><br>

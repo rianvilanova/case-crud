@@ -24,27 +24,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Nova notícia</title>
+    <title>Nova notícia | Jornal OPOVO</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <h1>Criar nova notícia</h1>
+
 <form method="POST">
-    <label>Título:</label><br>
-    <input type="text" name="titulo" required><br><br>
+    <label>Título:</label>
+    <input type="text" name="titulo" required>
 
-    <label>Subtítulo:</label><br>
-    <input type="text" name="subtitulo"><br><br>
+    <label>Subtítulo:</label>
+    <input type="text" name="subtitulo">
 
-    <label>Conteúdo:</label><br>
-    <textarea name="conteudo" rows="5" required></textarea><br><br>
+    <label>Conteúdo:</label>
+    <textarea name="conteudo" rows="5" required></textarea>
 
-    <label>Autor:</label><br>
-    <input type="text" name="autor" required><br><br>
+    <label>Autor:</label>
+    <input type="text" name="autor" required>
 
-    <label>Categoria:</label><br>
-    <input type="text" name="categoria"><br><br>
+    <label>Categoria:</label>
+    <input type="text" name="categoria">
 
-    <label>Tipo:</label><br>
+    <label>Tipo:</label>
     <select name="tipo" required>
         <option value="noticia">Notícia</option>
         <option value="analise">Análise</option>
@@ -52,10 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <option value="humor">Humor</option>
         <option value="cronica">Crônica</option>
         <option value="checagem de fato">Checagem de Fato</option>
-    </select><br><br>
+    </select>
 
     <button type="submit">Salvar</button>
-    <a href="index.php">Voltar</a>
+    <a href="index.php"><button type="button">Voltar</button></a>
 </form>
 </body>
 </html>
