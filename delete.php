@@ -3,11 +3,15 @@ global $conn;
 include('config/database.php');
 include('utils/functions.php');
 
-if (!isset($_GET['id'])) {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    die("Método não permitido.");
+}
+
+if (!isset($_POST['id'])) {
     die("ID não informado.");
 }
 
-$id = $_GET['id'];
+$id = $_POST['id'];
 
 if (deletarNoticia($conn, $id)) {
     header("Location: index.php");

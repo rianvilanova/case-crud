@@ -45,7 +45,14 @@ $noticias = listarNoticias($conn);
                 <td><?= htmlspecialchars(substr($n['conteudo'], 0, 100)) ?>...</td>
                 <td>
                     <a href="edit.php?id=<?= $n['id'] ?>">Editar</a> |
-                    <a href="delete.php?id=<?= $n['id'] ?>" onclick="return confirm('Excluir esta notícia?')">Excluir</a>
+                    <a href="#"
+                       onclick="if (confirm('Excluir esta notícia?')) { document.getElementById('form-excluir-<?= $n['id'] ?>').submit(); } return false;">
+                        Excluir
+                    </a>
+
+                    <form method="POST" action="delete.php" id="form-excluir-<?= $n['id'] ?>" style="display: none;">
+                        <input type="hidden" name="id" value="<?= $n['id'] ?>">
+                    </form>
                 </td>
             </tr>
         <?php endwhile; ?>
