@@ -9,7 +9,7 @@ Esse repositório é a solução de um case para o teste prático de Back-end do
 
 ## Captura de Tela
 
-![Tela principal.](./docs/Screenshot.png)
+![Tela principal.](https://i.imgur.com/AJNQHTG.png)
 
 ## Tecnologias
 * **Back-end:** PHP
@@ -44,16 +44,15 @@ Esse repositório é a solução de um case para o teste prático de Back-end do
     );
     ```
 
-4.
-Abra o arquivo `config/database.php` e configure as credenciais de acordo com a sua onfiguração do MySQL.
+4. Abra o arquivo `config/database.php` e configure as credenciais de acordo com a sua onfiguração do MySQL.
 
- ```php
- $host = "localhost";
- $port = 3306;
- $user = "root";  // <-- Seu usuário
- $pass = "admin"; // <-- Sua senha
- $db   = "opovo";
- ```
+    ```php
+    $host = "localhost";
+    $port = 3306;
+    $user = "root";  // <-- Seu usuário
+    $pass = "admin"; // <-- Sua senha
+    $db   = "opovo";
+    ```
 
 5.  **(Opcional)** Popule o banco
     para testar a aplicação com dados, excutando o script SQL abaixo:
